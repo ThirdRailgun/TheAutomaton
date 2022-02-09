@@ -4,6 +4,8 @@ from glob import glob
 import os.path
 import random
 
+#I intended for this to accept a Youtube link and play it through the chosen Discord audio channel.
+#something is wrong with this and I'm not sure what.
 class Music(commands.Cog):
     def __init__(self, client):
         self.client = client

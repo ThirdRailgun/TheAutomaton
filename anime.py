@@ -11,6 +11,8 @@ class Anime(commands.Cog):
         self.client = client
         self.parsedCommand = []
 
+    #this was written this way so that it could be called by a testing script.
+    #also it uses argparse which is pretty cool I guess. but what user would be calling this directly?
     def anime_logic(self, *args):
         parser = argparse.ArgumentParser(add_help=False)
         parser.add_argument("-s", "--skip", default=0, action="store", type=int, nargs="?")
@@ -27,6 +29,7 @@ class Anime(commands.Cog):
 
         return anime
 
+    #creation of embed object and the posting of it to discord.
     @commands.command(name="anime")
     async def anime_skeleton(self, context, *args):
         anime = self.anime_logic(*args)

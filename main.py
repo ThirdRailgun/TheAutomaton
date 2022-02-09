@@ -4,6 +4,7 @@ import os.path
 from anime import Anime
 from music import Music
 
+#discordToken.txt is the the token used to authenticate with Discord.
 SECRET_TOKEN = open(os.path.join("data", "discordToken.txt")).read()
 client = commands.Bot(command_prefix="/")
 
