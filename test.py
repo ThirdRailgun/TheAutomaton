@@ -3,6 +3,8 @@ from discord.ext import commands
 from time import sleep
 import unittest
 
+#TODO: Something must have changed with test_skip_1-3 because they now are failing.
+#the sleep commands are in place because I don't want to call on the API in quick successions.
 class TestCommandAnime(unittest.TestCase):
     mock_client = Anime(client = commands.Bot(command_prefix="/"))
 
